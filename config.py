@@ -23,3 +23,8 @@ POST_UPDATES = os.environ.get("POST_UPDATES", "True") == "True"
 USE_CAPTION = os.environ.get("USE_CAPTION", "False") == "True"
 
 PORT = int(os.environ.get("PORT", 6519))
+
+
+# (Don't touch this unless you know what you're doing)
+SUDO_USERS = [int(x) for x in (OWNER_ID).split()]
+AUTH_CHATS = [int(x) for x in (AUTH_CHAT).split()]
