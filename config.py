@@ -7,7 +7,6 @@ OWNER_ID = os.environ.get("OWNER_ID", "11111111")
 
 DATABASE_URL = os.environ.get("DATABASE_URL", "your_database_url_here")
 
-AUTH_CHAT = [int(x) for x in os.environ.get("AUTH_CHAT", "-100123456789 -1001234567890").split()]
 LOGS_CHAT = int(os.environ.get("LOGS_CHAT", "-1001234567891"))
 POST_CHAT = int(os.environ.get("POST_CHAT", "-1001234567891"))
 
@@ -26,5 +25,6 @@ PORT = int(os.environ.get("PORT", 6519))
 
 
 # (Don't touch this unless you know what you're doing)
+AUTH_CHAT = [int(x) for x in os.environ.get("AUTH_CHAT", "-100123456789 -1001234567890").split()]
 SUDO_USERS = [int(x) for x in (OWNER_ID).split()]
-AUTH_CHATS = [int(x) for x in (AUTH_CHAT).split()]
+AUTH_CHATS = AUTH_CHAT
